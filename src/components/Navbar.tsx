@@ -33,8 +33,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center gap-3">
             <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-md ${
               isAdmin 
-                ? 'bg-gradient-to-tr from-indigo-700 via-purple-700 to-indigo-800 shadow-indigo-500/20' 
-                : 'bg-gradient-to-tr from-blue-600 via-indigo-600 to-blue-700 shadow-blue-500/20'
+                ? 'bg-gradient-to-tr from-teal-700 via-emerald-700 to-teal-800 shadow-teal-500/20' 
+                : 'bg-gradient-to-tr from-emerald-600 via-teal-600 to-emerald-700 shadow-emerald-500/20'
             }`}>
               <Ticket className="w-6 h-6" />
             </div>
@@ -43,8 +43,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <span className="font-bold text-lg text-slate-900 tracking-tight">Ticketing Trans Hamana</span>
                 <span className={`px-2 py-0.5 rounded-full text-[11px] font-bold border ${
                   isAdmin 
-                    ? 'bg-indigo-50 text-indigo-700 border-indigo-200' 
-                    : 'bg-blue-50 text-blue-700 border-blue-200'
+                    ? 'bg-teal-50 text-teal-700 border-teal-200' 
+                    : 'bg-emerald-50 text-emerald-700 border-emerald-200'
                 }`}>
                   {isAdmin ? 'ADMIN IT' : 'USER'}
                 </span>

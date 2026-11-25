@@ -122,10 +122,10 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
       
       {/* Background Glow Orbs */}
       <div className={`absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl opacity-20 pointer-events-none transition-all duration-700 ${
-        selectedRole === 'admin' ? 'bg-indigo-600' : 'bg-blue-600'
+        selectedRole === 'admin' ? 'bg-teal-600' : 'bg-emerald-600'
       }`} />
       <div className={`absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl opacity-20 pointer-events-none transition-all duration-700 ${
-        selectedRole === 'admin' ? 'bg-purple-600' : 'bg-cyan-600'
+        selectedRole === 'admin' ? 'bg-emerald-700' : 'bg-teal-500'
       }`} />
 
       {/* Main Container */}
@@ -133,13 +133,13 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
         
         {/* Brand Logo Header */}
         <div className="text-center mb-6">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white shadow-xl shadow-blue-500/30 mb-3">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-600 text-white shadow-xl shadow-emerald-500/30 mb-3">
             <Ticket className="w-8 h-8" />
           </div>
           <h1 className="text-2xl font-extrabold text-white tracking-tight flex items-center justify-center gap-2">
             Ticketing Trans Hamana
-            <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30 flex items-center gap-1">
-              <Sparkles className="w-3 h-3 text-blue-300" /> AI
+            <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 flex items-center gap-1">
+              <Sparkles className="w-3 h-3 text-emerald-300" /> AI
             </span>
           </h1>
           <p className="text-xs text-slate-400 mt-1">
@@ -154,7 +154,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
             onClick={() => handleRoleTabChange('user')}
             className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-bold transition-all ${
               selectedRole === 'user'
-                ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-md shadow-blue-600/30'
+                ? 'bg-gradient-to-r from-emerald-600 to-emerald-700 text-white shadow-md shadow-emerald-600/30'
                 : 'text-slate-400 hover:text-white hover:bg-slate-700/50'
             }`}
           >
@@ -167,7 +167,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
             onClick={() => handleRoleTabChange('admin')}
             className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-bold transition-all ${
               selectedRole === 'admin'
-                ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md shadow-indigo-600/30'
+                ? 'bg-gradient-to-r from-teal-700 to-emerald-800 text-white shadow-md shadow-teal-700/30'
                 : 'text-slate-400 hover:text-white hover:bg-slate-700/50'
             }`}
           >
@@ -184,7 +184,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className={`p-1.5 rounded-lg text-white ${
-                  selectedRole === 'admin' ? 'bg-indigo-600' : 'bg-blue-600'
+                  selectedRole === 'admin' ? 'bg-teal-700' : 'bg-emerald-600'
                 }`}>
                   {selectedRole === 'admin' ? <ShieldCheck className="w-4 h-4" /> : <User className="w-4 h-4" />}
                 </span>
@@ -207,7 +207,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
                       setErrorMsg('');
                     }}
                     className={`px-2.5 py-1 rounded-lg transition-all ${
-                      authMode === 'login' ? 'bg-white text-blue-700 font-bold shadow-sm' : 'text-slate-600 hover:text-slate-900'
+                      authMode === 'login' ? 'bg-white text-emerald-700 font-bold shadow-sm' : 'text-slate-600 hover:text-slate-900'
                     }`}
                   >
                     Masuk
@@ -219,7 +219,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
                       setErrorMsg('');
                     }}
                     className={`px-2.5 py-1 rounded-lg transition-all ${
-                      authMode === 'register' ? 'bg-white text-blue-700 font-bold shadow-sm' : 'text-slate-600 hover:text-slate-900'
+                      authMode === 'register' ? 'bg-white text-emerald-700 font-bold shadow-sm' : 'text-slate-600 hover:text-slate-900'
                     }`}
                   >
                     + Daftar Gmail
@@ -269,7 +269,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="contoh@gmail.com atau nama@perusahaan.co.id"
-                  className="w-full text-xs sm:text-sm p-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all font-medium text-slate-800"
+                  className="w-full text-xs sm:text-sm p-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition-all font-medium text-slate-800"
                 />
               </div>
 
@@ -284,7 +284,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full text-xs sm:text-sm p-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all font-medium text-slate-800"
+                  className="w-full text-xs sm:text-sm p-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition-all font-medium text-slate-800"
                 />
               </div>
 
@@ -293,8 +293,8 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
                 disabled={loading}
                 className={`w-full py-3.5 px-4 rounded-xl text-xs sm:text-sm font-bold text-white shadow-lg transition-all flex items-center justify-center gap-2 mt-2 ${
                   selectedRole === 'admin'
-                    ? 'bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 shadow-indigo-500/25'
-                    : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-blue-500/25'
+                    ? 'bg-gradient-to-r from-teal-700 to-emerald-800 hover:from-teal-800 hover:to-emerald-900 shadow-teal-700/25'
+                    : 'bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-emerald-500/25'
                 }`}
               >
                 {loading ? (
@@ -317,7 +317,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
             <form onSubmit={handleRegisterSubmit} className="space-y-3.5 animate-in fade-in">
               <div>
                 <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
-                  <User className="w-3.5 h-3.5 text-blue-600" />
+                  <User className="w-3.5 h-3.5 text-emerald-600" />
                   Nama Lengkap <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -326,7 +326,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
                   value={regNama}
                   onChange={(e) => setRegNama(e.target.value)}
                   placeholder="Contoh: Muhammad Rahman"
-                  className="w-full text-xs sm:text-sm p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none font-medium"
+                  className="w-full text-xs sm:text-sm p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none font-medium"
                 />
               </div>
 
@@ -346,7 +346,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
                   value={regEmail}
                   onChange={(e) => setRegEmail(e.target.value)}
                   placeholder="nama.anda@gmail.com"
-                  className="w-full text-xs sm:text-sm p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none font-medium"
+                  className="w-full text-xs sm:text-sm p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none font-medium"
                 />
               </div>
 
@@ -360,7 +360,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
                   value={regJabatan}
                   onChange={(e) => setRegJabatan(e.target.value)}
                   placeholder="Contoh: Staf Marketing / Operasional / Keuangan"
-                  className="w-full text-xs sm:text-sm p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none font-medium"
+                  className="w-full text-xs sm:text-sm p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none font-medium"
                 />
               </div>
 
@@ -376,14 +376,14 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
                   value={regPassword}
                   onChange={(e) => setRegPassword(e.target.value)}
                   placeholder="Minimal 4 karakter"
-                  className="w-full text-xs sm:text-sm p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none font-medium"
+                  className="w-full text-xs sm:text-sm p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none font-medium"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-3.5 px-4 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 hover:from-blue-700 hover:to-indigo-800 shadow-lg shadow-blue-500/25 transition-all flex items-center justify-center gap-2 mt-3"
+                className="w-full py-3.5 px-4 rounded-xl text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-700 hover:to-teal-800 shadow-lg shadow-emerald-500/25 transition-all flex items-center justify-center gap-2 mt-3"
               >
                 {loading ? (
                   <>
@@ -416,13 +416,13 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
                       setEmail('user@perusahaan.co.id');
                       setPassword('user123');
                     }}
-                    className="w-full text-left p-2.5 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 text-xs text-slate-700 transition-colors flex items-center justify-between"
+                    className="w-full text-left p-2.5 rounded-xl bg-slate-50 hover:bg-emerald-50 border border-slate-200 hover:border-emerald-300 text-xs text-slate-700 transition-colors flex items-center justify-between"
                   >
                     <div>
                       <span className="font-semibold block text-slate-800">Ahmad Dahlan (Demo)</span>
                       <span className="text-[11px] text-slate-500">user@perusahaan.co.id</span>
                     </div>
-                    <span className="text-[10px] font-bold text-blue-600 bg-blue-100 px-2 py-0.5 rounded">Pakai</span>
+                    <span className="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">Pakai</span>
                   </button>
                 </div>
               ) : (
@@ -432,13 +432,13 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
                     setEmail('admin@perusahaan.co.id');
                     setPassword('admin123');
                   }}
-                  className="w-full text-left p-2.5 rounded-xl bg-slate-50 hover:bg-indigo-50 border border-slate-200 hover:border-indigo-300 text-xs text-slate-700 transition-colors flex items-center justify-between"
+                  className="w-full text-left p-2.5 rounded-xl bg-slate-50 hover:bg-teal-50 border border-slate-200 hover:border-teal-300 text-xs text-slate-700 transition-colors flex items-center justify-between"
                 >
                   <div>
                     <span className="font-semibold block text-slate-800">Hendra Gunawan (Admin IT)</span>
                     <span className="text-[11px] text-slate-500">admin@perusahaan.co.id</span>
                   </div>
-                  <span className="text-[10px] font-bold text-indigo-600 bg-indigo-100 px-2 py-0.5 rounded">Pakai</span>
+                  <span className="text-[10px] font-bold text-teal-700 bg-teal-100 px-2 py-0.5 rounded">Pakai</span>
                 </button>
               )}
             </div>

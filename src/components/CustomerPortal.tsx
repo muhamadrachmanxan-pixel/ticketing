@@ -183,17 +183,17 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
       
       {/* Banner Selamat Datang Pengguna */}
-      <div className="bg-gradient-to-r from-blue-700 via-indigo-700 to-blue-800 rounded-3xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden">
+      <div className="bg-gradient-to-r from-emerald-700 via-teal-700 to-emerald-800 rounded-3xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden">
         <div className="absolute right-0 top-0 translate-x-12 -translate-y-8 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none" />
         <div className="relative z-10 max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-blue-100 text-xs font-semibold mb-3 border border-white/20">
-            <Sparkles className="w-3.5 h-3.5 text-blue-300" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-emerald-100 text-xs font-semibold mb-3 border border-white/20">
+            <Sparkles className="w-3.5 h-3.5 text-emerald-300" />
             Portal Layanan Pengguna & Auto-Triage AI
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
             Selamat Datang, {currentUser.nama}! 👋
           </h1>
-          <p className="mt-2 text-sm sm:text-base text-blue-100/90 leading-relaxed">
+          <p className="mt-2 text-sm sm:text-base text-emerald-100/90 leading-relaxed">
             Laporkan kendala perangkat atau kebutuhan IT Anda. Sistem AI kami akan menganalisis prioritas secara otomatis dan Admin IT akan segera menanganinya.
           </p>
 
@@ -202,7 +202,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
               onClick={() => setActiveTab('create')}
               className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 ${
                 activeTab === 'create'
-                  ? 'bg-white text-blue-900 shadow-md font-bold'
+                  ? 'bg-white text-emerald-950 shadow-md font-bold'
                   : 'bg-white/20 text-white hover:bg-white/30'
               }`}
             >
@@ -214,7 +214,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
               onClick={() => setActiveTab('list')}
               className={`px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 ${
                 activeTab === 'list'
-                  ? 'bg-white text-blue-900 shadow-md font-bold'
+                  ? 'bg-white text-emerald-950 shadow-md font-bold'
                   : 'bg-white/20 text-white hover:bg-white/30'
               }`}
             >
@@ -286,7 +286,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
                 Pesan keluhan Anda akan dianalisis secara otomatis oleh sistem AI untuk menentukan tingkat prioritas penanganan.
               </p>
             </div>
-            <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-50 text-blue-700 text-xs font-semibold border border-blue-200">
+            <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 text-emerald-700 text-xs font-semibold border border-emerald-200">
               <Sparkles className="w-3.5 h-3.5" />
               AI Auto-Triage Active
             </div>
@@ -305,7 +305,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
                 value={judul}
                 onChange={(e) => setJudul(e.target.value)}
                 placeholder="Contoh: WiFi di Lantai 2 terputus dan tidak dapat membuka ERP"
-                className="w-full text-sm sm:text-base p-3.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400 font-medium"
+                className="w-full text-sm sm:text-base p-3.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all placeholder:text-slate-400 font-medium"
               />
             </div>
 
@@ -315,7 +315,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
               {/* Perangkat */}
               <div>
                 <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                  <HardDrive className="w-3.5 h-3.5 text-blue-600" />
+                  <HardDrive className="w-3.5 h-3.5 text-emerald-600" />
                   Perangkat Terkait <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -324,7 +324,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
                   value={perangkat}
                   onChange={(e) => setPerangkat(e.target.value)}
                   placeholder="Contoh: Laptop ThinkPad T14 / Printer Epson"
-                  className="w-full text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                  className="w-full text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
                 />
                 <div className="flex flex-wrap gap-1.5 mt-2">
                   {quickDevices.map((d, i) => (
@@ -332,7 +332,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
                       type="button"
                       key={i}
                       onClick={() => setPerangkat(d)}
-                      className="text-[11px] px-2.5 py-1 bg-slate-100 hover:bg-blue-50 hover:text-blue-700 text-slate-600 rounded-lg transition-colors border border-slate-200"
+                      className="text-[11px] px-2.5 py-1 bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 text-slate-600 rounded-lg transition-colors border border-slate-200"
                     >
                       + {d}
                     </button>
@@ -352,7 +352,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
                   value={lokasi}
                   onChange={(e) => setLokasi(e.target.value)}
                   placeholder="Contoh: Gedung A Lantai 2, Divisi Keuangan"
-                  className="w-full text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                  className="w-full text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all"
                 />
                 <div className="flex flex-wrap gap-1.5 mt-2">
                   {quickLocations.map((l, i) => (
@@ -382,7 +382,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
                 value={pesan}
                 onChange={(e) => setPesan(e.target.value)}
                 placeholder="Jelaskan apa yang terjadi, sejak kapan masalah muncul, dan dampaknya pada pekerjaan Anda..."
-                className="w-full text-sm p-3.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400"
+                className="w-full text-sm p-3.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all placeholder:text-slate-400"
               />
             </div>
 
@@ -416,7 +416,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
                 <div className="flex flex-wrap gap-2 p-3 bg-slate-50 rounded-xl border border-slate-200">
                   {lampiranList.map((att, idx) => (
                     <div key={idx} className="flex items-center gap-1.5 px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-xs font-medium text-slate-700">
-                      <Paperclip className="w-3 h-3 text-blue-600" />
+                      <Paperclip className="w-3 h-3 text-emerald-600" />
                       <span>{att.nama}</span>
                       <button
                         type="button"
@@ -458,7 +458,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-2xl shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50"
+                className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold rounded-2xl shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2 transition-all disabled:opacity-50"
               >
                 {isSubmitting ? (
                   <>
@@ -485,7 +485,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
             <h2 className="text-xl font-bold text-slate-900">Tiket Laporan Saya</h2>
             <button
               onClick={() => onRefreshTickets()}
-              className="text-xs font-semibold text-slate-600 hover:text-blue-600 flex items-center gap-1.5 p-2 rounded-lg hover:bg-slate-100"
+              className="text-xs font-semibold text-slate-600 hover:text-emerald-600 flex items-center gap-1.5 p-2 rounded-lg hover:bg-slate-100"
             >
               <RotateCw className="w-3.5 h-3.5" />
               Segarkan Data
@@ -501,7 +501,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
               </p>
               <button
                 onClick={() => setActiveTab('create')}
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-xl text-xs font-semibold hover:bg-blue-700"
+                className="mt-4 px-4 py-2 bg-emerald-600 text-white rounded-xl text-xs font-semibold hover:bg-emerald-700 shadow-md shadow-emerald-500/20"
               >
                 Buat Tiket Sekarang
               </button>
@@ -511,7 +511,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
               {myTickets.map((ticket) => (
                 <div
                   key={ticket.id}
-                  className="bg-white rounded-2xl p-5 border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-4"
+                  className="bg-white rounded-2xl p-5 border border-slate-200 hover:border-emerald-400 hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-4"
                 >
                   <div className="space-y-2 flex-1">
                     <div className="flex flex-wrap items-center gap-2">
@@ -603,7 +603,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] shadow-2xl border border-slate-100 flex flex-col overflow-hidden">
             
-            <div className="px-6 py-5 bg-gradient-to-r from-blue-700 to-indigo-700 text-white flex items-center justify-between">
+            <div className="px-6 py-5 bg-gradient-to-r from-emerald-700 to-teal-700 text-white flex items-center justify-between">
               <div>
                 <span className="text-xs font-mono font-bold bg-white/20 px-2 py-0.5 rounded">
                   #{selectedTicket.id}
@@ -630,47 +630,47 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
                 
                 <div className="flex items-center justify-between text-xs font-semibold text-center relative">
                   <div className="flex-1 flex flex-col items-center">
-                    <div className="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs mb-1">
+                    <div className="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs mb-1">
                       1
                     </div>
-                    <span className="text-blue-700">Dibuat</span>
+                    <span className="text-emerald-700">Dibuat</span>
                   </div>
 
-                  <div className={`h-0.5 flex-1 ${selectedTicket.ai_status === 'SUCCESS' ? 'bg-blue-600' : 'bg-slate-300'}`} />
+                  <div className={`h-0.5 flex-1 ${selectedTicket.ai_status === 'SUCCESS' ? 'bg-emerald-600' : 'bg-slate-300'}`} />
 
                   <div className="flex-1 flex flex-col items-center">
                     <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs mb-1 ${
-                      selectedTicket.ai_status === 'SUCCESS' ? 'bg-blue-600 text-white' : 'bg-amber-500 text-white'
+                      selectedTicket.ai_status === 'SUCCESS' ? 'bg-emerald-600 text-white' : 'bg-amber-500 text-white'
                     }`}>
                       2
                     </div>
-                    <span className={selectedTicket.ai_status === 'SUCCESS' ? 'text-blue-700' : 'text-amber-700'}>
+                    <span className={selectedTicket.ai_status === 'SUCCESS' ? 'text-emerald-700' : 'text-amber-700'}>
                       {selectedTicket.ai_status === 'SUCCESS' ? 'Analisis AI' : 'Manual'}
                     </span>
                   </div>
 
-                  <div className={`h-0.5 flex-1 ${['IN_PROGRESS', 'PENDING', 'RESOLVED', 'CLOSED'].includes(selectedTicket.status) ? 'bg-blue-600' : 'bg-slate-300'}`} />
+                  <div className={`h-0.5 flex-1 ${['IN_PROGRESS', 'PENDING', 'RESOLVED', 'CLOSED'].includes(selectedTicket.status) ? 'bg-emerald-600' : 'bg-slate-300'}`} />
 
                   <div className="flex-1 flex flex-col items-center">
                     <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs mb-1 ${
-                      ['IN_PROGRESS', 'PENDING', 'RESOLVED', 'CLOSED'].includes(selectedTicket.status) ? 'bg-blue-600 text-white' : 'bg-slate-300 text-slate-600'
+                      ['IN_PROGRESS', 'PENDING', 'RESOLVED', 'CLOSED'].includes(selectedTicket.status) ? 'bg-emerald-600 text-white' : 'bg-slate-300 text-slate-600'
                     }`}>
                       3
                     </div>
-                    <span className={['IN_PROGRESS', 'PENDING', 'RESOLVED', 'CLOSED'].includes(selectedTicket.status) ? 'text-blue-700' : 'text-slate-400'}>
+                    <span className={['IN_PROGRESS', 'PENDING', 'RESOLVED', 'CLOSED'].includes(selectedTicket.status) ? 'text-emerald-700' : 'text-slate-400'}>
                       Diproses Admin
                     </span>
                   </div>
 
-                  <div className={`h-0.5 flex-1 ${['RESOLVED', 'CLOSED'].includes(selectedTicket.status) ? 'bg-emerald-600' : 'bg-slate-300'}`} />
+                  <div className={`h-0.5 flex-1 ${['RESOLVED', 'CLOSED'].includes(selectedTicket.status) ? 'bg-teal-600' : 'bg-slate-300'}`} />
 
                   <div className="flex-1 flex flex-col items-center">
                     <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs mb-1 ${
-                      ['RESOLVED', 'CLOSED'].includes(selectedTicket.status) ? 'bg-emerald-600 text-white' : 'bg-slate-300 text-slate-600'
+                      ['RESOLVED', 'CLOSED'].includes(selectedTicket.status) ? 'bg-teal-600 text-white' : 'bg-slate-300 text-slate-600'
                     }`}>
                       4
                     </div>
-                    <span className={['RESOLVED', 'CLOSED'].includes(selectedTicket.status) ? 'text-emerald-700 font-bold' : 'text-slate-400'}>
+                    <span className={['RESOLVED', 'CLOSED'].includes(selectedTicket.status) ? 'text-teal-700 font-bold' : 'text-slate-400'}>
                       Selesai
                     </span>
                   </div>
@@ -700,23 +700,23 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
 
               {/* Hasil Analisis AI */}
               {selectedTicket.ai_analysis && (
-                <div className="p-4 bg-blue-50/70 border border-blue-200 rounded-2xl space-y-2 text-xs">
-                  <div className="flex items-center gap-1.5 font-bold text-blue-900">
-                    <Sparkles className="w-4 h-4 text-blue-600" />
+                <div className="p-4 bg-emerald-50/70 border border-emerald-200 rounded-2xl space-y-2 text-xs">
+                  <div className="flex items-center gap-1.5 font-bold text-emerald-900">
+                    <Sparkles className="w-4 h-4 text-emerald-600" />
                     Hasil Ekstraksi Parameter AI:
                   </div>
                   <div className="grid grid-cols-2 gap-2">
                     <div>
-                      <span className="text-blue-600 font-medium">Kategori:</span>{' '}
+                      <span className="text-emerald-700 font-medium">Kategori:</span>{' '}
                       <span className="font-bold text-slate-800">{selectedTicket.ai_analysis.kategori}</span>
                     </div>
                     <div>
-                      <span className="text-blue-600 font-medium">Prioritas:</span>{' '}
+                      <span className="text-emerald-700 font-medium">Prioritas:</span>{' '}
                       <span className="font-bold text-slate-800">{selectedTicket.ai_analysis.prioritas}</span>
                     </div>
                   </div>
-                  <div className="text-slate-700 pt-1 border-t border-blue-200/60">
-                    <span className="font-medium text-blue-900 block">Ringkasan Masalah:</span>
+                  <div className="text-slate-700 pt-1 border-t border-emerald-200/60">
+                    <span className="font-medium text-emerald-900 block">Ringkasan Masalah:</span>
                     {selectedTicket.ai_analysis.ringkasan}
                   </div>
                 </div>
@@ -724,9 +724,9 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
 
               {/* Penanganan & Solusi dari Admin */}
               {selectedTicket.penanganan && (
-                <div className="p-4 bg-indigo-50/70 border border-indigo-200 rounded-2xl space-y-2 text-xs">
-                  <span className="font-bold text-indigo-900 flex items-center gap-1.5">
-                    <ShieldCheck className="w-4 h-4 text-indigo-600" />
+                <div className="p-4 bg-teal-50/70 border border-teal-200 rounded-2xl space-y-2 text-xs">
+                  <span className="font-bold text-teal-900 flex items-center gap-1.5">
+                    <ShieldCheck className="w-4 h-4 text-teal-600" />
                     Penanganan oleh Admin IT:
                   </span>
                   <p className="text-slate-700">
@@ -736,7 +736,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
                     <p className="text-slate-600">Catatan: {selectedTicket.penanganan.catatan_admin}</p>
                   )}
                   {selectedTicket.penanganan.solusi && (
-                    <div className="mt-2 pt-2 border-t border-indigo-200/80 bg-white p-3 rounded-xl border">
+                    <div className="mt-2 pt-2 border-t border-teal-200/80 bg-white p-3 rounded-xl border">
                       <span className="font-bold text-emerald-800 block mb-0.5">Laporan Solusi:</span>
                       <p className="text-slate-800">{selectedTicket.penanganan.solusi}</p>
                     </div>
@@ -762,7 +762,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({
                 </span>
                 <div className="space-y-2 max-h-40 overflow-y-auto pr-1">
                   {selectedTicket.riwayat_aktivitas.map((act) => (
-                    <div key={act.id} className="text-xs border-l-2 border-blue-500 pl-3 py-1 bg-slate-50 rounded-r-lg">
+                    <div key={act.id} className="text-xs border-l-2 border-emerald-500 pl-3 py-1 bg-slate-50 rounded-r-lg">
                       <div className="flex items-center justify-between">
                         <span className="font-bold text-slate-800">{act.aksi}</span>
                         <span className="text-[10px] text-slate-400">

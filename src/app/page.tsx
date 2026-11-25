@@ -97,7 +97,7 @@ export default function Home() {
       <main className="flex-1 pb-16">
         {loading ? (
           <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-3">
-            <RotateCw className="w-8 h-8 text-blue-600 animate-spin" />
+            <RotateCw className="w-8 h-8 text-emerald-600 animate-spin" />
             <p className="text-sm font-semibold text-slate-600">Memuat data tiket...</p>
           </div>
         ) : (
@@ -132,7 +132,7 @@ export default function Home() {
           <div className="flex items-center gap-1.5 font-medium text-slate-700">
             <span>Ticketing Trans Hamana</span>
             <span>&bull;</span>
-            <span className="text-blue-600 font-semibold">User & Admin IT Portal</span>
+            <span className="text-emerald-600 font-semibold">User & Admin IT Portal</span>
           </div>
           <p className="text-slate-400">
             Login terpisah untuk Pengguna dan Administrator IT &bull; Didukung AI Auto-Triage & Fallback Cerdas

@@ -42,7 +42,7 @@ export const RatingModal: React.FC<RatingModalProps> = ({
       <div className="bg-white rounded-3xl max-w-md w-full shadow-2xl border border-slate-100 overflow-hidden">
         
         {/* Header */}
-        <div className="px-6 py-5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white relative">
+        <div className="px-6 py-5 bg-gradient-to-r from-emerald-600 to-teal-600 text-white relative">
           <button
             onClick={onClose}
             className="absolute top-4 right-4 p-1 rounded-full text-white/80 hover:text-white hover:bg-white/20 transition-colors"
@@ -51,10 +51,10 @@ export const RatingModal: React.FC<RatingModalProps> = ({
           </button>
           <div className="flex items-center gap-2 mb-1">
             <CheckCircle2 className="w-5 h-5 text-emerald-300" />
-            <span className="text-xs font-semibold uppercase tracking-wider text-blue-100">Tiket Telah Selesai</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-emerald-100">Tiket Telah Selesai</span>
           </div>
           <h3 className="text-lg font-bold leading-snug">Berikan Penilaian Solusi Admin</h3>
-          <p className="text-xs text-blue-100 mt-1">
+          <p className="text-xs text-emerald-100 mt-1">
             Bagaimana kepuasan Anda terhadap penanganan kendala tiket #{ticket.id}?
           </p>
         </div>
@@ -66,8 +66,8 @@ export const RatingModal: React.FC<RatingModalProps> = ({
             <p className="text-sm font-semibold text-slate-900 line-clamp-1">{ticket.judul}</p>
             {ticket.penanganan?.diperiksa_oleh && (
               <p className="text-xs text-slate-600 mt-1 flex items-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-indigo-600" />
-                Ditangani oleh: <span className="font-semibold text-indigo-700">{ticket.penanganan.diperiksa_oleh}</span>
+                <ShieldCheck className="w-3.5 h-3.5 text-teal-600" />
+                Ditangani oleh: <span className="font-semibold text-teal-700">{ticket.penanganan.diperiksa_oleh}</span>
               </p>
             )}
           </div>
@@ -117,7 +117,7 @@ export const RatingModal: React.FC<RatingModalProps> = ({
           {/* Ulasan Feedback Text */}
           <div>
             <label className="block text-xs font-semibold text-slate-700 mb-1.5 flex items-center gap-1.5">
-              <MessageSquare className="w-3.5 h-3.5 text-blue-600" />
+              <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
               Ulasan / Masukan Anda (Opsional)
             </label>
             <textarea
@@ -125,7 +125,7 @@ export const RatingModal: React.FC<RatingModalProps> = ({
               value={ulasan}
               onChange={(e) => setUlasan(e.target.value)}
               placeholder="Berikan feedback Anda mengenai penanganan masalah ini..."
-              className="w-full text-xs sm:text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all placeholder:text-slate-400"
+              className="w-full text-xs sm:text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-all placeholder:text-slate-400"
             />
           </div>
 
@@ -142,7 +142,7 @@ export const RatingModal: React.FC<RatingModalProps> = ({
             <button
               type="submit"
               disabled={submitting}
-              className="px-5 py-2.5 text-xs sm:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 rounded-xl shadow-md shadow-blue-500/20 transition-all flex items-center gap-2"
+              className="px-5 py-2.5 text-xs sm:text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 rounded-xl shadow-md shadow-emerald-500/20 transition-all flex items-center gap-2"
             >
               {submitting ? 'Mengirim...' : 'Kirim Penilaian & Tutup Tiket'}
             </button>

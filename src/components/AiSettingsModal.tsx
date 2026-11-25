@@ -56,14 +56,14 @@ export const AiSettingsModal: React.FC<AiSettingsModalProps> = ({ isOpen, onClos
       <div className="bg-white rounded-2xl max-w-lg w-full shadow-2xl border border-slate-100 overflow-hidden">
         
         {/* Header */}
-        <div className="px-6 py-5 bg-gradient-to-r from-indigo-700 via-blue-700 to-indigo-800 text-white flex items-center justify-between">
+        <div className="px-6 py-5 bg-gradient-to-r from-emerald-700 via-teal-700 to-emerald-800 text-white flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center border border-white/20">
-              <Ticket className="w-5 h-5 text-blue-200" />
+              <Ticket className="w-5 h-5 text-emerald-200" />
             </div>
             <div>
               <h3 className="text-base font-bold leading-tight">Konfigurasi Layanan AI</h3>
-              <p className="text-xs text-blue-200">Pengaturan Google Gemini & Intelligent Fallback</p>
+              <p className="text-xs text-emerald-200">Pengaturan Google Gemini & Intelligent Fallback</p>
             </div>
           </div>
           <button
@@ -77,9 +77,9 @@ export const AiSettingsModal: React.FC<AiSettingsModalProps> = ({ isOpen, onClos
         {/* Content */}
         <div className="p-6 space-y-5 text-slate-800">
           
-          <div className="p-3.5 bg-blue-50/80 border border-blue-200 rounded-xl text-xs text-blue-900 leading-relaxed">
-            <div className="flex items-center gap-1.5 font-semibold text-blue-800 mb-1">
-              <Sparkles className="w-4 h-4 text-blue-600" />
+          <div className="p-3.5 bg-emerald-50/80 border border-emerald-200 rounded-xl text-xs text-emerald-900 leading-relaxed">
+            <div className="flex items-center gap-1.5 font-semibold text-emerald-800 mb-1">
+              <Sparkles className="w-4 h-4 text-emerald-600" />
               Sistem Triage Cerdas Siap Pakai
             </div>
             Sistem dilengkapi dengan <strong>Intelligent Fallback Engine</strong>. Aplikasi dapat berjalan langsung secara optimal baik dengan Google Gemini API maupun offline engine bawaan!
@@ -93,7 +93,7 @@ export const AiSettingsModal: React.FC<AiSettingsModalProps> = ({ isOpen, onClos
             <select
               value={model}
               onChange={(e) => setModel(e.target.value)}
-              className="w-full text-xs sm:text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white font-medium"
+              className="w-full text-xs sm:text-sm p-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none bg-white font-medium"
             >
               <option value="gemini-1.5-flash">Gemini 1.5 Flash (Sangat Cepat & Efisien - Rekomendasi)</option>
               <option value="gemini-2.0-flash">Gemini 2.0 Flash (Next-Gen Ultra Cepat)</option>
@@ -109,7 +109,7 @@ export const AiSettingsModal: React.FC<AiSettingsModalProps> = ({ isOpen, onClos
             </p>
             <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-600">
               <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-blue-500" />
+                <span className="w-2 h-2 rounded-full bg-emerald-500" />
                 <span><strong>Kategori:</strong> Network, HW, App, dll.</span>
               </div>
               <div className="flex items-center gap-1.5">
@@ -165,7 +165,7 @@ export const AiSettingsModal: React.FC<AiSettingsModalProps> = ({ isOpen, onClos
             <button
               type="button"
               onClick={onClose}
-              className="px-5 py-2 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-sm transition-colors"
+              className="px-5 py-2 text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-sm transition-colors"
             >
               Tutup & Simpan
             </button>
